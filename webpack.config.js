@@ -22,6 +22,20 @@ module.exports = {
       {
         test: /\.scss$/,
         loaders: ["style", "css", "sass"]
+      },
+      {
+        test: /\.(jpg|png)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[hash].[ext]',
+         }
+      },
+      {
+        test: /\.(jpg|png)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 25000,
+        }
       }
     ]
   }
