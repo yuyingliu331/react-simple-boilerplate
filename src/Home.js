@@ -13,7 +13,7 @@ class Home extends Component {
             <div>
                <h2> Locations available:</h2>
                 <Location />
-              <img src="bar"></img>
+
             </div>
 
         </div>

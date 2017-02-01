@@ -1,21 +1,31 @@
 import React, {Component} from 'react';
 
- class Location extends Component {
-  getInitialState(){
-   return {
-    locations = ['New York City', 'Seattle', 'Los Angeles', 'San Francisco']
-    };
-  }
-  handleReverse(){
-    this.setState({ locations: this.state.locations.reverse()});
-  }
+
+Location = React.createClass({
+  locations: ['NYC', 'Seattle'],
 
   render(){
-
+    return(
+           <div className="parent-component">
+             <h3>List of Cities:</h3>
+             <Cities locations= { this.locations} />
+           </div>
+           );
   }
+});
 
 
-};
+class Cities extends Component {
+  render(){
+    return(
+    <div className="child-component">{ this.props.locations.map((city, index)=>{
+      return <p key={ `city-${index}` }>{ city }</p>
+    })
+  }
+    </div>
+    );
+  }
+}
 
 
 export default Location;
