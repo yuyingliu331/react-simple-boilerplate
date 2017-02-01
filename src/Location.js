@@ -2,13 +2,24 @@ import React, {Component} from 'react';
 
 
 Location = React.createClass({
-  locations: ['NYC', 'Seattle'],
+  locations: ['NYC', 'Seattle', 'LA'],
+
+   getInitialState() {
+    return {
+      locations: [ 'NYC', 'Seattle', 'LA' ]
+    }
+  },
+
+  handleReverse() {
+    this.setState( { locations: this.state.locations.reverse() } );
+  },
+
 
   render(){
     return(
            <div className="parent-component">
-             <h3>List of Cities:</h3>
-             <Cities locations= { this.locations} />
+             <h3 onClick={this.handleReverse}>List of Cities:</h3>
+             <Cities locations= { this.state.locations} />
            </div>
            );
   }

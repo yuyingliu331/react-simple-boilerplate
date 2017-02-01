@@ -11,7 +11,7 @@ class Home extends Component {
 
             <h1 className="greeting">Welcome to Lunch Duo!</h1>
             <div>
-               <h2> Locations available:</h2>
+
                 <Location />
 
             </div>
