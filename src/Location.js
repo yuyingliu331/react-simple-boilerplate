@@ -18,7 +18,7 @@ Location = React.createClass({
   render(){
     return(
            <div className="parent-component">
-             <h3 onClick={this.handleReverse}>List of Cities:</h3>
+             <h3 onClick={this.handleReverse}>List of Cities: (Click me)</h3>
              <Cities locations= { this.state.locations} />
            </div>
            );
