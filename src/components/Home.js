@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import Location from './Location';
 import Nav from './Nav';
-
+import SignUp from './SignUp.js';
 class Home extends Component {
   render() {
-      const styles = require('../styles/home.scss');
+      const styles = require('../../styles/home.scss');
 
     return (
         <div className ="styles.home">
@@ -14,6 +14,7 @@ class Home extends Component {
             </span>
         <div>
             <Location />
+
         </div>
       </div>
 
